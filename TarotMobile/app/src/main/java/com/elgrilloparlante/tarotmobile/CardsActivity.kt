@@ -15,7 +15,7 @@ class CardsActivity : AppCompatActivity() {
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
         recyclerView.layoutManager = GridLayoutManager(this, 3) // 3 columns grid
 
-        val cardList = prepareCardList() // Create a list of Card objects
+        val cardList = prepareCardList().shuffled() // Create a list of Card objects
         val adapter = CardsAdapter(cardList)
         recyclerView.adapter = adapter
     }

@@ -30,6 +30,10 @@ class CardsAdapter(private val cardList: List<Card>) :
             holder.frontImageView.visibility = View.INVISIBLE
             holder.backImageView.visibility = View.VISIBLE
         }
+
+        // Mostrar el frente correspondiente
+        holder.frontImageView.setImageResource(card.cardImage)
+
         holder.itemView.setOnClickListener {
             card.isFaceUp = !card.isFaceUp
             notifyItemChanged(position)
